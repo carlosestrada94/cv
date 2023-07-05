@@ -1,0 +1,9 @@
+.external-link {
+    font-family: var(--primary-font);
+    @apply flex items-center gap-1;
+
+    svg {
+        @apply w-3 h-3;
+        fill: rgb(var(--color));
+    }
+}
