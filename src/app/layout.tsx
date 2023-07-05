@@ -5,7 +5,7 @@ import "./globals.scss";
 
 export const metadata = {
   title: "Carlos Estrada",
-  description: "Carlos Estrada's personal website",
+  description: "Carlos Estrada's website",
 };
 
 export default function RootLayout({
