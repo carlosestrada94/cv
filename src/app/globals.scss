@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --color: 0, 0, 0;
+  --background: 255, 255, 255;
+  --primary-font: "Caladea", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: 255, 255, 255;
+    --background: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--color));
+  background: rgb(var(--background));
+  @apply container max-w-3xl mx-auto px-4 sm:px-8;
+}
+
+h1,
+a {
+  font-family: var(--primary-font);
+}
+
+h1 {
+  @apply text-4xl text-center;
+}
+
+h2,
+h3 {
+  @apply uppercase;
+}
+
+h2,
+h3,
+p,
+li {
+  font-family: var(--secondary-font);
+}
+
+a {
+  @apply focus:outline-none focus:ring-1 focus:ring-[rgb(var(--color))] p-1 opacity-60 hover:opacity-100 visited:opacity-100;
+}
+
+header {
+  @apply flex flex-col items-center py-8;
+}
+
+footer  {
+  @apply flex flex-col items-center py-8 text-sm;
+}
+
+#root-body {
+  @apply flex flex-col items-center min-h-screen;
+
+  h2 {
+    @apply text-center;
+  }
+
+  main {
+    @apply flex-1 w-full flex flex-col items-center gap-8;
+
+    section {
+      @apply w-full flex flex-col items-center gap-4;
+
+      ul {
+        @apply flex flex-col items-center gap-1;
+      }
+    }
+  }
+}
